@@ -1,0 +1,2 @@
+#Create a requirements.txt file with the required libraries 
+    #(hint: pip freeze and pipreqs might be helpful here!)
