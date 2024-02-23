@@ -1,26 +1,37 @@
-# Description
-In this project we will query an API to obtain a list of countries and their past political leaders. We then extract and sanitize their short bio from Wikipedia. Finally, we save the data to disk.
 
-Create a scraper that builds a JSON file with the political leaders of each country you get from [this API](https://country-leaders.onrender.com/docs).
+# Wikipedia-Scraper
 
-Include in this file the first paragraph of the Wikipedia page of these leaders (you'll retrieve the Wikipedia page URL from the API, which you then have to scrape yourself).
+## Description
+In this project we will query an API (application programming interface) to obtain a list of countries and their past political leaders. We then extract and sanitize their short bio from Wikipedia. Finally, we save the data to a file.
 
-## Must-have features
-- You should have a working main.py script that calls the API and creates a JSON file.
-- Create your own exception to include proper exception handling.
-- Have a nice README with crystal-clear installation and execution instructions.
+![alt text](https://www.parsehub.com/blog/content/images/size/w2000/2019/10/scrape-wikipedia-articles.jpg)
 
-# Repo-structure
+## Repo-structure
 
 
-# 2. Installation
+## Installation
+To run the program you'll need the requirements.txt containing the required libraries.
 
-# 3. Usage
+## Usage
+### Setup
+1. Create a virtual environment.
+2. Create a requirements.txt file
+3. Create a src folder to put the leaders_scraper.py file
+4. Create a GitHub repo
 
-# (4. Visuals)
+### Notebook
+wikipedia_scraper.ipynb
 
-# (5. Contributors)
+### Scraper.py module: WikipediaScraper
+Object to structurally retrieve data from the API.
+    - Contains six attributes
+    - Has five methods
 
-# (6. Timeline)
+### Main
+Calls the WikipediaScraper object and saves the data into a JSON file.
 
-# (7. Personal situation)
+## Timeline
+This project took form in five days.
+
+## Personal situation
+This project was made during the AI Bootcamp at BeCode.

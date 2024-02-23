@@ -18,20 +18,20 @@ class WikipediaScraper:
         cookie = req_cookie.cookies.get_dict()
         return cookie
 
-    def get_countries(self, cookie): # list returns a list of the supported countries from the API
+    def get_countries(self): # list returns a list of the supported countries from the API
         # Query the "/countries" endpoint
-        req_countries = requests.get(self.country_endpoint, cookies=cookie)
+        req_countries = requests.get(self.country_endpoint, cookies=self.cookie)
         countries = req_countries.json()
         return countries
 
-    def get_leaders(self, country: str, countries): # None, populates the leader_data object with the leaders of a country retrieved from the API
+    def get_leaders(self, country: str): # None, populates the leader_data object with the leaders of a country retrieved from the API
         # loop over the countries
         leaders_per_country = {}
 
         for country in countries:
 
             params= {"country" : country}
-            req_leaders = requests.get(self.leaders_endpoint, params=params, cookies=cookie)
+            req_leaders = requests.get(self.leaders_endpoint, params=params, cookies=self.cookie)
             leaders = req_leaders.json()
         
             leaders_per_country[country] = leaders
@@ -61,7 +61,7 @@ class WikipediaScraper:
             
         return(reg_par2)
 
-    get_first_paragraph(get_leaders=("wikipedia_url"))
+    get_first_paragraph(get_leaders())
     
     def to_json_file(filepath: str, leaders_per_country): # None, stores the data structure into a JSON file
         
