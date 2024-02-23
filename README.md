@@ -7,7 +7,7 @@ In this project we will query an API (application programming interface) to obta
 ![alt text](https://www.parsehub.com/blog/content/images/size/w2000/2019/10/scrape-wikipedia-articles.jpg)
 
 ## Repo-structure
-
+![alt text]("C:\Users\fabie\OneDrive\Documenten\BeCodeGhent\Projects\Repo-structure.png")
 
 ## Installation
 To run the program you'll need the requirements.txt containing the required libraries.
